@@ -14,7 +14,9 @@ ALIASES={
  "power-apps":["powerapps","microsoft-power-apps"],
  "google-apps-script":["googleappsscript","apps-script","appsscript"],
  "microsoft-excel":["excel","ms-excel","xlsx"],"python":["python-language"],
- "amazon-web-services":["aws","amazon-aws"],"microsoft-azure":["azure"],"google-cloud":["gcp","google-cloud-platform"]}
+ "amazon-web-services":["aws","amazon-aws"],"aws":["amazon-web-services","amazon-aws"],
+ "microsoft-azure":["azure"],
+ "google-cloud":["gcp","google-cloud-platform"],"googlecloud":["gcp","google-cloud","google-cloud-platform"]}
 PRODUCTS={
  "power-bi":"https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg",
  "power-automate":"https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-Automate-Colored.svg",
@@ -60,7 +62,7 @@ def framed(s,bg,shape):
 def variants(s):
  s=strip(s);return {"00_Raw_Source":s,"01_Transparent_Black":trans(s,"#000000"),"02_Transparent_White":trans(s,"#FFFFFF"),"03_Circle_Blue":framed(s,BLUE,"circle"),"04_Circle_Dark":framed(s,DARK,"circle"),"05_Rounded_Square_Blue":framed(s,BLUE,"square"),"06_Rounded_Square_Dark":framed(s,DARK,"square")}
 def title(s):
- o={"power-bi":"Power BI","power-automate":"Power Automate","power-query":"Power Query","power-apps":"Power Apps","google-apps-script":"Google Apps Script","amazon-web-services":"Amazon Web Services (AWS)","microsoft-azure":"Microsoft Azure","google-cloud":"Google Cloud (GCP)","microsoft-excel":"Microsoft Excel"}
+ o={"power-bi":"Power BI","power-automate":"Power Automate","power-query":"Power Query","power-apps":"Power Apps","google-apps-script":"Google Apps Script","amazon-web-services":"Amazon Web Services (AWS)","aws":"Amazon Web Services (AWS)","microsoft-azure":"Microsoft Azure","google-cloud":"Google Cloud (GCP)","googlecloud":"Google Cloud (GCP)","microsoft-excel":"Microsoft Excel"}
  return o.get(s," ".join(x.upper() if x in {"aws","gcp","sql","api","bi"} else x.capitalize() for x in s.split("-")))
 def write_set(base,name,svg,cat,source,index,aliases=()):
  name=slug(name); names=sorted({name,*[slug(x) for x in aliases]}); v=variants(svg); keywords=" ".join(sorted(set(names+name.split("-")+title(name).lower().split())))
