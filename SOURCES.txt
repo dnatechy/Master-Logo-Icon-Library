@@ -1,0 +1,20 @@
+SOURCES / UPDATER REFERENCES
+============================
+
+Microsoft Power BI / Power Automate / Power Query:
+https://github.com/microsoft/PowerBI-Icons
+
+Large searchable brand collection:
+https://github.com/simple-icons/simple-icons
+https://simpleicons.org/
+
+Google Apps Script product logo:
+https://commons.wikimedia.org/wiki/File:Google_Apps_Script.svg
+Official product page:
+https://developers.google.com/apps-script
+
+AWS official architecture icons page (reference for AWS-approved diagram assets):
+https://aws.amazon.com/architecture/icons/
+
+The bundled exact product vectors are not screenshot crops.
+The seven presentation variants are generated from source geometry without redrawing it.

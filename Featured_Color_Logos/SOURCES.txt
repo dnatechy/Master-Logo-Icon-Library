@@ -1,0 +1,9 @@
+Featured colour logo sources
+============================
+These were added as high-quality colour vectors/exports for common data and automation products.
+- Power BI / Power Automate / Power Query: Microsoft Power BI / Power Platform icon resources.
+- Microsoft Excel: Microsoft Excel 2018-generation product mark.
+- Google Apps Script: Google Apps Script product logo.
+- Python: Python Software Foundation logo.
+
+Brand/product marks remain trademarks of their respective owners. Use them to identify the corresponding product/service.

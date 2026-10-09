@@ -1,0 +1,18 @@
+{
+  "created": "2026-10-09T08:44:27.135Z",
+  "fontawesome_version": "6.7.2",
+  "counts": {
+    "Brand Logos": 495,
+    "General Icons - Solid": 1402,
+    "General Icons - Regular": 163
+  },
+  "variants": [
+    "raw-source",
+    "transparent-black",
+    "transparent-white",
+    "circle-blue",
+    "circle-dark",
+    "square-blue",
+    "square-dark"
+  ]
+}
