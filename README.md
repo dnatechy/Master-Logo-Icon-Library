@@ -1,14 +1,29 @@
 # DnA Techy Master Logo & Icon Library
 
+[![Build icon library](https://github.com/dnatechy/Master-Logo-Icon-Library/actions/workflows/build-library.yml/badge.svg)](https://github.com/dnatechy/Master-Logo-Icon-Library/actions/workflows/build-library.yml)
+
 A large, searchable SVG library for **PowerPoint, dashboards, reports, documents, websites and UI design**. It combines broad brand coverage with general-purpose interface icons and consistent presentation-ready variants.
 
 > **DnA Techy public product.** The library is free to browse and reuse subject to upstream licenses and each brand owner's trademark/brand-usage rules.
+
+## Library at a glance
+
+Current generated/indexed snapshot:
+
+| Collection | Indexed assets |
+| --- | ---: |
+| Brand logos | 27,090 |
+| General icons — Solid | 14,007 |
+| General icons — Regular | 1,911 |
+| **Total** | **43,008** |
+
+The exact count can grow as upstream collections are refreshed. `BUILD_SUMMARY.json` contains the current generated totals.
 
 ## What is included
 
 - **Brand logos** — broad company and product coverage, with search-friendly aliases such as `power-bi`, `powerbi`, `microsoft-power-bi`, `aws`, `gcp`, etc.
 - **General icons** — solid and regular icon sets for analytics, business, technology, navigation, communication, operations and more.
-- **Selected product vectors** — product-specific sources for Power BI, Power Automate, Power Query, Power Apps, Dataverse, Google Apps Script, Python and other curated items when a stable source is available.
+- **Selected product vectors** — product-specific sources for Power BI, Power Automate, Power Query, Power Apps, Dataverse, Power Pages, Google Apps Script, Python and other curated items when a stable source is available.
 - **Seven SVG variants** for generated icons:
   1. `00_Raw_Source`
   2. `01_Transparent_Black`
@@ -25,7 +40,7 @@ A large, searchable SVG library for **PowerPoint, dashboards, reports, documents
 1. Download or clone this repository.
 2. Open `Search_Icons.html` in **Microsoft Edge or Google Chrome**.
 3. Click **Connect local folder** and select the repository folder.
-4. Search for `Power BI`, `Power Automate`, `AWS`, `Google`, `database`, `chart`, `location`, `automation`, etc.
+4. Search for `Power BI`, `Power Automate`, `AWS`, `GCP`, `Google`, `database`, `chart`, `location`, `automation`, etc.
 5. Insert the SVG directly into PowerPoint or your design tool.
 
 The local search mode scans the real folder. If new icons are added later, reload/refresh and they become searchable without rebuilding the HTML manually.
@@ -38,6 +53,7 @@ Examples:
 power-bi__logo__raw-source.svg
 powerbi__logo__circle-blue.svg
 microsoft-power-automate__logo__square-dark.svg
+gcp__logo__raw-source.svg
 database__icon__transparent-black.svg
 chart-line__icon__circle-blue.svg
 ```
@@ -67,17 +83,22 @@ Featured_Color_Logos/
 Search_Icons.html
 Icon_Index.json
 Icon_Index.csv
+BUILD_SUMMARY.json
 ```
 
 ## PowerPoint usage
 
 SVG is recommended because it stays sharp at any size. In recent PowerPoint versions, compatible single-colour SVGs can also be recoloured using **Graphics Fill**.
 
+For third-party brand marks, use the raw/original version when brand fidelity is important and follow the brand owner's current usage rules.
+
 ## Automatic updates
 
-This repository includes a reproducible builder and GitHub Actions workflow. It refreshes upstream collections, regenerates the seven variants, rebuilds the indexes and commits only user-facing generated assets. The workflow also runs monthly so the library can grow as upstream collections change.
+This repository includes a reproducible builder and GitHub Actions workflow. It refreshes upstream collections, regenerates the seven variants, rebuilds the indexes and commits only user-facing generated assets.
 
-Build logic: `tools/build_library.py`.
+The build also runs automatically every month so the library can grow as upstream collections change.
+
+Build logic: [`tools/build_library.py`](tools/build_library.py)
 
 ## Sources and attribution
 
@@ -104,6 +125,13 @@ Requests for missing logos, better aliases, corrected sources and search improve
 ## License
 
 DnA Techy-authored **code, search UI and original documentation** are licensed under the MIT License. Third-party icon/logo assets are **not relicensed by DnA Techy**; their upstream licenses and trademark restrictions continue to apply. See [`LICENSE`](LICENSE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
+## Project documents
+
+- [`CHANGELOG.md`](CHANGELOG.md) — release history
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution guide
+- [`SECURITY.md`](SECURITY.md) — security reporting
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — community expectations
 
 ---
 
