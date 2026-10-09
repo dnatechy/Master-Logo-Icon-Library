@@ -1,0 +1,26 @@
+name: Logo or icon request
+description: Request a missing brand logo, alias, or general icon
+title: "[Request] "
+labels: []
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Logo / icon name
+      placeholder: e.g. Microsoft Fabric
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source URL
+      description: Prefer an official brand/resource page or upstream vector repository.
+  - type: textarea
+    id: aliases
+    attributes:
+      label: Useful search aliases
+      placeholder: fabric, microsoft-fabric, ms-fabric
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

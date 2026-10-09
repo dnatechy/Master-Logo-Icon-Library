@@ -1,0 +1,23 @@
+name: Bug report
+description: Report a broken icon, search issue, build problem, or rendering bug
+title: "[Bug] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the icon filename or search term when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Edge / Chrome / PowerPoint / OS version

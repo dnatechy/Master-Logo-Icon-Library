@@ -1,0 +1,51 @@
+name: Build icon library
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 3 1 * *'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/**'
+      - '.github/workflows/build-library.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: master-logo-icon-library-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PNG renderer
+        run: python -m pip install --disable-pip-version-check cairosvg
+
+      - name: Build merged public library
+        run: python tools/build_library.py
+
+      - name: Commit generated library
+        run: |
+          git config user.name "DnA Techy Library Bot"
+          git config user.email "dnatechy@users.noreply.github.com"
+          git add Brand_Logos General_Icons_Solid General_Icons_Regular Featured_Color_Logos Icon_Index.json Icon_Index.csv BUILD_SUMMARY.json
+          if git diff --cached --quiet; then
+            echo "No library changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh logo and icon library"
+          git push origin HEAD:main
